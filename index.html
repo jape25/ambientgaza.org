@@ -1,62 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        header {
-            background-color: #444;
-            color: white;
-            padding: 10px 0;
-        }
-        main {
-            padding: 20px;
-        }
-        .donate-button {
-            display: inline-block;
-            background-color: #007BFF;
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 1.2em;
-        }
-        .donate-button:hover {
-            background-color: #0056b3;
-        }
-        footer {
-            background-color: #444;
-            color: white;
-            padding: 10px 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ambient Gaza</title>
+    <style>
+        /* General Body Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('AMBIENT_GAZA_DRAFT.png'); /* Replace with your image file */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            color: #d9d9d9; /* Light gray text for readability */
+        }
+
+        /* Header Styling */
+        header {
+            background-color: rgba(0, 0, 0, 0.9); /* Nearly black for contrast */
+            padding: 20px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            color: silver; /* Silver for standout text */
+        }
+
+        /* Three Column Layout */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            max-width: 1200px;
+            margin: 50px auto;
+            gap: 20px;
+        }
+
+        /* Left Column (Donate Button) */
+        .left-column {
+            flex: 1;
+            text-align: center;
+        }
+        .donate-button {
+            display: inline-block;
+            background-color: silver;
+            color: black;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 1.2em;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        .donate-button:hover {
+            background-color: #d9d9d9;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+            transform: translateY(-2px);
+        }
+
+        /* Center Column (Text Content) */
+        .center-column {
+            flex: 2;
+            background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black for readability */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        .center-column h2 {
+            font-size: 2em;
+            color: silver;
+        }
+        .center-column p {
+            font-size: 1.2em;
+            line-height: 1.8;
+            color: #e0e0e0; /* Light gray for readability */
+        }
+
+        /* Right Column (Spotify Embed) */
+        .right-column {
+            flex: 1;
+            text-align: center;
+        }
+        iframe {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: rgba(0, 0, 0, 0.9);
+            color: #d9d9d9;
+            padding: 20px 0;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+        }
+        footer p {
+            margin: 0;
+            font-size: 0.9em;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .left-column, .center-column, .right-column {
+                flex: 1 0 auto;
+                text-align: center;
+            }
+            iframe {
+                width: 100%;
+                height: 400px;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>Welcome to Ambient Gaza</h1>
+        <h1>Ambient Gaza</h1>
     </header>
-    <main>
-        <h2>Support Our Mission</h2>
-        <p>Help us bring peace and creativity to Gaza through music and art.</p>
-        <a href="https://www.paypal.com/donate/?hosted_button_id=N6F2XADQU42TJ" class="donate-button">Donate Now</a>
+    <div class="container">
+        <!-- Left Column -->
+        <div class="left-column">
+            <a href="https://www.paypal.com/donate/?hosted_button_id=N6F2XADQU42TJ" class="donate-button">Donate Now</a>
+        </div>
 
-        <h2>Listen on Spotify</h2>
-        <iframe src="https://open.spotify.com/embed/album/6kVyDG665v3lgpouM4qr1p?utm_source=generator" width="300" height="600" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-    </main>
+        <!-- Center Column -->
+        <div class="center-column">
+            <h2>Outline</h2>
+            <p>An album of ambient music incorporating soundscapes from Gaza pre-destruction. To be listened to as an act of hope/resistance, and to garner substantial royalties to go directly to chosen NGOs aiding Palestine on an ongoing basis.</p>
+
+            <h2>Social Context</h2>
+            <p>Gaza is in a state of destruction with human atrocities being committed beyond the scale of historic comprehension. People around the world are desperate for ways to support and respond to the crisis, and ways to show solidarity with Palestinian people.</p>
+
+            <h2>Concept</h2>
+            <p>Ambient Gaza is designed to be an ambient long player i.e. to be listened to on repeat as background music. Produced by Ambient Gaza Collective and released by Sonic Ecology, every track incorporates a different soundscape from Gaza, including marketplaces, olive and date harvests, families playing on the beach, and more.</p>
+
+            <h2>Fundraising</h2>
+            <p>According to Spotify data, listening to an album for 20-24 hours will generate royalties of around £1.002. 1000 listeners will generate £100.00 per day, and over a month that will generate £30,000. Funds from royalties will go towards helping Gaza.</p>
+        </div>
+
+        <!-- Right Column -->
+        <div class="right-column">
+            <iframe 
+                src="https://open.spotify.com/embed/album/6kVyDG665v3lgpouM4qr1p?utm_source=generator" 
+                width="300" 
+                height="600" 
+                frameborder="0" 
+                allowtransparency="true" 
+                allow="encrypted-media">
+            </iframe>
+        </div>
+    </div>
     <footer>
-        <p>&copy; 2024 Ambient Gaza</p>
+        <p>&copy; 2024 Ambient Gaza | Made with ❤️</p>
     </footer>
 </body>
 </html>
