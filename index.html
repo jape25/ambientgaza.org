@@ -34,10 +34,10 @@
             color: silver; /* Silver for standout text */
         }
 
-        /* Three Column Layout */
+        /* Layout Styling */
         .container {
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: flex-start;
             max-width: 1200px;
             margin: 50px auto;
@@ -47,6 +47,9 @@
         /* Left Column (Donate Button) */
         .left-column {
             flex: 1;
+            position: fixed; /* Keeps the donate button visible on scroll */
+            top: 100px;
+            left: 20px; /* Adjust to fine-tune positioning */
             text-align: center;
         }
         .donate-button {
@@ -70,6 +73,8 @@
         /* Center Column (Text Content) */
         .center-column {
             flex: 2;
+            margin-left: 250px; /* Leave space for the fixed left column */
+            margin-right: 250px; /* Leave space for the fixed right column */
             background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black for readability */
             padding: 20px;
             border-radius: 10px;
@@ -88,10 +93,14 @@
         /* Right Column (Spotify Embed) */
         .right-column {
             flex: 1;
+            position: fixed; /* Keeps the Spotify embed visible on scroll */
+            top: 100px;
+            right: 20px; /* Adjust to fine-tune positioning */
             text-align: center;
         }
         iframe {
-            width: 100%;
+            width: 300px;
+            height: 600px;
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
         }
@@ -118,9 +127,12 @@
                 flex-direction: column;
                 gap: 10px;
             }
-            .left-column, .center-column, .right-column {
-                flex: 1 0 auto;
-                text-align: center;
+            .left-column, .right-column {
+                position: static; /* Removes fixed positioning on smaller screens */
+                margin: 0 auto;
+            }
+            .center-column {
+                margin: 0;
             }
             iframe {
                 width: 100%;
@@ -142,24 +154,22 @@
         <!-- Center Column -->
         <div class="center-column">
             <h2>Outline</h2>
-            <p>An album of ambient music incorporating soundscapes from Gaza pre-destruction. To be listened to as an act of hope/resistance, and to raise funds to go directly to NGOs aiding Palestine on an ongoing basis.</p>
+            <p>An album of ambient music incorporating soundscapes from Gaza pre-destruction. To be listened to as an act of hope/resistance, and to garner substantial royalties to go directly to chosen NGOs aiding Palestine on an ongoing basis.</p>
 
             <h2>Social Context</h2>
             <p>Gaza is in a state of destruction with human atrocities being committed beyond the scale of historic comprehension. People around the world are desperate for ways to support and respond to the crisis, and ways to show solidarity with Palestinian people.</p>
 
             <h2>Concept</h2>
-            <p>Ambient Gaza is designed to be an ambient long player i.e. to be listened to on repeat as background music. Produced by Ambient Gaza Collective and released by Sonic Ecology, every track incorporates a different soundscape from Gaza, including olive harvests, children playing, Gaza beach, and more.</p>
+            <p>Ambient Gaza is designed to be an ambient long player i.e. to be listened to on repeat as background music. Produced by Ambient Gaza Collective and released by Sonic Ecology, every track incorporates a different soundscape from Gaza, including marketplaces, olive and date harvests, families playing on the beach, and more.</p>
 
             <h2>Fundraising</h2>
-            <p>According to Spotify data, listening to an album for 20-24 hours will generate royalties of around £1. 1000 listeners will generate £1000.00 per day, and over a month that will generate £30,000. Can you help us get to an consistent 1000 listeners per day? Funds from royalties will go directly towards helping Gaza.</p>
+            <p>According to Spotify data, listening to an album for 20-24 hours will generate royalties of around £1.002. 1000 listeners will generate £100.00 per day, and over a month that will generate £30,000. Funds from royalties will go towards helping Gaza.</p>
         </div>
 
         <!-- Right Column -->
         <div class="right-column">
             <iframe 
                 src="https://open.spotify.com/embed/album/6kVyDG665v3lgpouM4qr1p?utm_source=generator" 
-                width="300" 
-                height="600" 
                 frameborder="0" 
                 allowtransparency="true" 
                 allow="encrypted-media">
