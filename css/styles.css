@@ -377,4 +377,112 @@ footer img {
   .gdpr-notice .gdpr-actions {
     margin-top: 5px;
   }
+}
+
+/* Social Sharing */
+.social-share {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 30px 0;
+}
+
+.social-share-title {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  color: #f2f2f2;
+}
+
+.share-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 15px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  color: #f2f2f2;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.share-button i {
+  margin-right: 8px;
+  font-size: 16px;
+}
+
+.share-button:hover {
+  transform: translateY(-2px);
+  background-color: rgba(20, 153, 84, 0.2);
+  border-color: #149954;
+}
+
+.share-twitter {
+  color: #1da1f2;
+}
+
+.share-facebook {
+  color: #4267B2;
+}
+
+.share-telegram {
+  color: #0088cc;
+}
+
+.share-whatsapp {
+  color: #25D366;
+}
+
+.share-copy {
+  color: #f2f2f2;
+}
+
+.share-button:hover {
+  color: #f2f2f2;
+}
+
+@media (max-width: 600px) {
+  .social-share {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .share-button {
+    width: 200px;
+  }
+}
+
+/* Logo styles */
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.logo img {
+  width: 120px;
+  height: auto;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .logo img {
+    width: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo img {
+    width: 80px;
+  }
 } 
